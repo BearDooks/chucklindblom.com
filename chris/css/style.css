@@ -1,0 +1,255 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
+
+/* General Body and Typography */
+body {
+    font-family: 'Poppins', sans-serif; /* Modern sans-serif font */
+    color: #343a40; /* Dark gray for body text */
+    background-color: #f8f9fa; /* Light gray background */
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif; /* A more prominent font for headings */
+    color: #212529; /* Even darker for headings */
+    margin-bottom: 0.5em;
+}
+
+a {
+    color: #007bff; /* Bootstrap primary blue */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Darker blue on hover */
+}
+
+/* Top Bar */
+.top-bar {
+    background-color: #343a40; /* Darker bar */
+    color: #ffffff;
+    padding: 5px 0;
+    font-size: 0.9em;
+}
+
+.top-bar .link-gray-base {
+    color: #ffffff;
+}
+
+.top-bar .link-gray-base:hover {
+    color: #cccccc;
+}
+
+/* Navigation Bar */
+.navbar {
+    background-color: #ffffff !important; /* White navbar */
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1); /* Subtle shadow */
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+
+.navbar-brand {
+    color: #212529 !important; /* Dark brand text */
+    font-weight: bold;
+    font-size: 1.5em;
+}
+
+.navbar-brand img {
+    margin-right: 10px;
+    height: 45px;
+    max-height: 45px;
+}
+
+.navbar-nav .nav-link {
+    color: #343a40 !important; /* Dark links */
+    font-weight: 500;
+    padding-right: 1rem;
+    padding-left: 1rem;
+    transition: all 0.3s ease;
+}
+
+.navbar-nav .nav-link:hover,
+.navbar-nav .nav-link.active {
+    color: #007bff !important; /* Primary blue on hover/active */
+}
+
+/* Hero Section (index.html specific) */
+.hero-section {
+    background: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url('../images/body_shop.jpg') no-repeat center center;
+    background-size: cover;
+    padding: 100px 0;
+    color: #ffffff;
+    text-shadow: 1px 1px 3px rgba(0,0,0,0.5);
+}
+
+.hero-section h1 {
+    color: #ffffff;
+    font-size: 3.5em;
+    margin-bottom: 15px;
+}
+
+.hero-section p.lead {
+    font-size: 1.5em;
+    margin-bottom: 30px;
+}
+
+.hero-section .btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+    padding: 12px 30px;
+    font-size: 1.1em;
+    border-radius: 50px; /* Pill-shaped button */
+    transition: all 0.3s ease;
+}
+
+.hero-section .btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+    transform: translateY(-2px); /* Slight lift effect */
+}
+
+/* Section Titles */
+.section-title {
+    position: relative;
+    padding-bottom: 10px;
+    margin-bottom: 30px;
+    font-weight: bold;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    height: 3px;
+    width: 60px;
+    background-color: #007bff; /* Primary blue underline */
+    border-radius: 2px;
+}
+
+/* Cards */
+.card {
+    border: none;
+    border-radius: 10px;
+    box-shadow: 0 4px 15px rgba(0,0,0,0.08); /* More pronounced shadow */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px); /* Lift effect on hover */
+    box-shadow: 0 8px 20px rgba(0,0,0,0.12);
+}
+
+.card-body {
+    padding: 30px;
+}
+
+.card-title {
+    color: #007bff; /* Primary blue for card titles */
+    font-size: 1.3em;
+    margin-bottom: 15px;
+}
+
+.card i {
+    color: #007bff; /* Primary blue for icons */
+}
+
+/* Footer */
+footer {
+    background-color: #212529 !important; /* Darker footer */
+    color: #ffffff;
+    padding: 30px 0;
+    font-size: 0.9em;
+}
+
+footer a {
+    color: #ffffff;
+}
+
+footer a:hover {
+    color: #007bff;
+}
+
+/* Utility classes for spacing and alignment (already handled by Bootstrap, but good to keep in mind) */
+.my-5 { margin-top: 3rem !important; margin-bottom: 3rem !important; }
+.py-5 { padding-top: 3rem !important; padding-bottom: 3rem !important; }
+.mb-4 { margin-bottom: 1.5rem !important; }
+.text-center { text-align: center !important; }
+.lead { font-size: 1.25rem; font-weight: 300; }
+
+/* Specific adjustments for contact page map */
+.embed-responsive {
+    position: relative;
+    display: block;
+    width: 100%;
+    padding: 0;
+    overflow: hidden;
+}
+.embed-responsive .embed-responsive-item,
+.embed-responsive iframe,
+.embed-responsive embed,
+.embed-responsive object {
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+    border: 0;
+}
+/* Ensure the map iframe takes full height of its container */
+.embed-responsive-16by9 {
+    padding-bottom: 56.25%; /* 16:9 aspect ratio */
+}
+/* Override for specific height */
+.embed-responsive[style*="height"] {
+    padding-bottom: 0 !important;
+}
+
+/* Form styling */
+.form-control {
+    border-radius: 0.25rem;
+    border: 1px solid #ced4da;
+    padding: 0.75rem 1rem;
+}
+
+.form-control:focus {
+    border-color: #80bdff;
+    box-shadow: 0 0 0 0.25rem rgba(0, 123, 255, 0.25);
+}
+
+.btn-primary {
+    background-color: #007bff;
+    border-color: #007bff;
+}
+
+.btn-primary:hover {
+    background-color: #0056b3;
+    border-color: #0056b3;
+}
+
+.advantages-list li {
+    padding: 10px 0;
+    border-bottom: 1px solid #eee; /* Light gray border */
+    display: flex; /* Use flexbox for alignment */
+    align-items: center;
+}
+
+.advantages-list li:last-child {
+    border-bottom: none; /* No border for the last item */
+}
+
+.advantages-list li i {
+    font-size: 1.2em; /* Slightly larger icon */
+    margin-right: 10px;
+}
+
+.card .blockquote-footer {
+    color: #6c757d; /* Muted gray color */
+    background-color: transparent !important; /* Ensure no background interference */
+    padding-top: 10px; /* Add some space above the footer */
+    border-top: 1px solid rgba(0,0,0,.1); /* Subtle separator */
+    margin-top: 15px; /* Space from the quote above */
+}
