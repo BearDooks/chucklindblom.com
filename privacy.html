@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Privacy Policy | Chuck Lindblom</title>
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="container">
+        <main class="glass-panel" style="text-align: left; max-width: 800px; margin: 40px auto;">
+            <nav class="resume-nav" style="margin-bottom: 20px;">
+                <a href="index.html" class="back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Home
+                </a>
+            </nav>
+
+            <h1>Privacy Policy</h1>
+            <p>Last updated: <span id="date">January 2026</span></p>
+
+            <section>
+                <h2>1. Introduction</h2>
+                <p>Welcome to <strong>chucklindblom.com</strong>. This Privacy Policy explains how I collect, use, and
+                    protect your information when you visit my website.</p>
+            </section>
+
+            <section>
+                <h2>2. Information We Collect</h2>
+                <p>My website uses <strong>Google Analytics</strong> to help me understand how visitors engage with the
+                    site. Google Analytics collects information anonymously. It reports website trends without
+                    identifying
+                    individual visitors.</p>
+                <p><strong>Google Analytics may collect the following data:</strong></p>
+                <ul>
+                    <li>Browser type and version</li>
+                    <li>Operating system</li>
+                    <li>Referrer URL (the page you visited previously)</li>
+                    <li>Hostname of the accessing computer (IP address)</li>
+                    <li>Time of the server inquiry</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>3. Cookies</h2>
+                <p>This website uses cookies to function properly and to analyze traffic. Cookies are small text files
+                    stored on your device.</p>
+                <ul>
+                    <li><strong>Essential Cookies:</strong> Required for the site to function (e.g., remembering your
+                        cookie consent preference).</li>
+                    <li><strong>Analytics Cookies:</strong> Used by Google Analytics to track visitor usage. You can opt
+                        out of these by declining cookies in the banner or using a browser add-on.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>4. How We Use Information</h2>
+                <p>I use the data collected to:</p>
+                <ul>
+                    <li>Monitor and analyze the performance of my website.</li>
+                    <li>Improve user experience and content.</li>
+                    <li>Detect and prevent technical issues.</li>
+                </ul>
+            </section>
+
+            <section>
+                <h2>5. Your Rights</h2>
+                <p>You have the right to access, rectify, or erase your personal data. Since Google Analytics data is
+                    anonymized, I cannot directly identify you to fulfill these requests based solely on analytics data.
+                    However, you can prevent Google Analytics from using your data by installing the <a
+                        href="https://tools.google.com/dlpage/gaoptout" target="_blank"
+                        style="color: var(--accent-primary);">Google Analytics Opt-out Browser Add-on</a>.</p>
+            </section>
+
+            <section>
+                <h2>6. Contact</h2>
+                <p>If you have any questions about this Privacy Policy, please contact me at: <br>
+                    <strong>Chuck.Lindblom [at] Gmail.com</strong>
+                </p>
+            </section>
+
+        </main>
+    </div>
+
+    <footer>
+        <p>&copy;
+            <script>document.write(new Date().getFullYear())</script> Chuck Lindblom.
+        </p>
+    </footer>
+
+    <!-- Cookie Banner Logic (Shared) -->
+    <div id="cookie-banner" class="cookie-banner" style="display: none;">
+        <div class="cookie-content">
+            <p>I use cookies to analyze website traffic and improve your experience. By accepting, you agree to my use
+                of cookies. Please refer to <a href="privacy.html"
+                    style="color: var(--accent-primary); text-decoration: none;">Privacy Policy</a> for more
+                information.</p>
+            <div class="cookie-buttons">
+                <button id="accept-cookies" class="btn-accept">Accept</button>
+                <button id="decline-cookies" class="btn-decline">Decline</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2MYL07MPMM';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-2MYL07MPMM');
+        }
+
+        document.addEventListener("DOMContentLoaded", function () {
+            const banner = document.getElementById("cookie-banner");
+            const acceptBtn = document.getElementById("accept-cookies");
+            const declineBtn = document.getElementById("decline-cookies");
+            const consent = localStorage.getItem("cookieConsent");
+
+            if (consent === "accepted") {
+                loadGoogleAnalytics();
+            } else if (!consent) {
+                banner.style.display = "flex";
+            }
+
+            acceptBtn.addEventListener("click", function () {
+                localStorage.setItem("cookieConsent", "accepted");
+                banner.style.display = "none";
+                loadGoogleAnalytics();
+            });
+
+            declineBtn.addEventListener("click", function () {
+                localStorage.setItem("cookieConsent", "declined");
+                banner.style.display = "none";
+            });
+        });
+    </script>
+</body>
+
+</html>
