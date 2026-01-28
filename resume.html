@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Resume | Chuck Lindblom</title>
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Montserrat:wght@400;700&display=swap"
+        rel="stylesheet">
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="resume-container">
+        <header class="resume-header">
+            <nav class="resume-nav">
+                <a href="index.html" class="back-link">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 24 24" fill="none"
+                        stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                        <line x1="19" y1="12" x2="5" y2="12"></line>
+                        <polyline points="12 19 5 12 12 5"></polyline>
+                    </svg>
+                    Back to Home
+                </a>
+            </nav>
+            <h1 class="text-gradient">Chuck Lindblom</h1>
+            <p class="resume-role">Senior Systems Engineer & IT Professional</p>
+            <span class="resume-contact">Chuck.Lindblom [at] Gmail.com</span>
+        </header>
+
+        <!-- Summary -->
+        <section class="resume-section">
+            <h2>Summary</h2>
+            <p>
+                Results-driven IT professional with 15+ years of experience managing complex IT environments.
+                Skilled in automation (PowerShell scripting), virtual infrastructure (VMware, Nutanix),
+                cloud platforms (GCP, Azure), and data center operations. Proven track record of leading
+                successful projects and supporting large teams. Successfully oversaw the operation of 60
+                physical hosts supporting over 2000 virtual machines across 4 data centers.
+            </p>
+        </section>
+
+        <!-- Technical Skills -->
+        <section class="resume-section">
+            <h2>Technical Skills</h2>
+
+            <div class="skills-category">
+                <h3>Cloud & Infrastructure</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Azure</span>
+                    <span class="skill-tag">GCP</span>
+                    <span class="skill-tag">VMware (vSphere, ESXi)</span>
+                    <span class="skill-tag">Nutanix (AHV)</span>
+                    <span class="skill-tag">Cohesity</span>
+                    <span class="skill-tag">Terraform</span>
+                    <span class="skill-tag">Docker</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Systems & Networking</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">Windows Server</span>
+                    <span class="skill-tag">Linux (Ubuntu, CentOS)</span>
+                    <span class="skill-tag">Active Directory</span>
+                    <span class="skill-tag">SQL</span>
+                    <span class="skill-tag">DNS/DHCP</span>
+                    <span class="skill-tag">NetApp NAS</span>
+                </div>
+            </div>
+
+            <div class="skills-category">
+                <h3>Automation & Tools</h3>
+                <div class="skills-grid">
+                    <span class="skill-tag">PowerShell</span>
+                    <span class="skill-tag">Python</span>
+                    <span class="skill-tag">Git</span>
+                    <span class="skill-tag">ServiceNow</span>
+                    <span class="skill-tag">M365</span>
+                    <span class="skill-tag">MDM (Intune, ForeScout)</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Experience -->
+        <section class="resume-section">
+            <h2>Professional Experience</h2>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <span class="job-title">Systems Engineer</span>
+                    <span class="job-company">The Jackson Lab, Farmington, CT</span>
+                    <span class="job-date">Sept 2021 - Present</span>
+                </div>
+                <ul class="job-details">
+                    <li>Architected and deployed a comprehensive Nutanix infrastructure, successfully migrating the
+                        entire legacy VMware environment with zero downtime.</li>
+                    <li>Spearheaded the critical firmware and software upgrade of 42 Simplivity hosts, ensuring system
+                        stability and security compliance.</li>
+                    <li>Directed a $1.5M Disaster Recovery expansion initiative, integrating Cohesity and Azure Cold
+                        Storage to enhance data resilience.</li>
+                    <li>Executed the enterprise-wide migration of backups from NetBackup/Veeam to Cohesity, improving
+                        recovery time objectives.</li>
+                    <li>Orchestrated the transition of GCP workloads from System Services to Research IT, optimizing
+                        cloud resource allocation.</li>
+                    <li>Engineered robust backup solutions for production VMs utilizing Cohesity and Azure integration.
+                    </li>
+                    <li>Designed and deployed a new VRA 8.X environment to streamline virtual resource provisioning.
+                    </li>
+                    <li>Developed advanced automation scripts for ServiceNow to improve operational efficiency.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <span class="job-title">Systems Administrator II</span>
+                    <span class="job-company">The Jackson Lab</span>
+                    <span class="job-date">Sept 2018 - July 2021</span>
+                </div>
+                <ul class="job-details">
+                    <li>Designed and implemented a high-volume COVID-19 sample processing system in Azure, scaling to
+                        handle 10,000+ daily samples.</li>
+                    <li>Authored Terraform scripts for automated GCP project provisioning, reducing setup time and
+                        ensuring consistency.</li>
+                    <li>Led the migration of 10 critical servers to GCP for the CKB team, delivering significant
+                        operational time savings.</li>
+                    <li>Established a centralized Git repository for system scripts and documentation within Azure
+                        DevOps.</li>
+                    <li>Provided Tier 3 systems support and acted as the primary technical liaison for multiple research
+                        labs.</li>
+                    <li>Developed comprehensive GCP billing and administration dashboards using Google Data Studio,
+                        Python, and Google App Engine.</li>
+                    <li>Executed the migration of 200+ servers to a modernized virtual environment.</li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <span class="job-title">AVP - Systems Engineering</span>
+                    <span class="job-company">Conning, Hartford, CT</span>
+                    <span class="job-date">Sept 2013 - Sept 2018</span>
+                </div>
+                <ul class="job-details">
+                    <li>Managed end-to-end infrastructure engineering projects, ensuring timely delivery and adherence
+                        to scope.</li>
+                    <li>Configured and optimized high-performance virtual SQL environments on ESX 6.5 and NetApp AFF8080
+                        arrays.</li>
+                    <li>Implemented turnkey virtual environments for new international offices in Cologne and Hong Kong.
+                    </li>
+                    <li>Administered a global infrastructure comprising HA email relays, load balancers, and 300+ VMware
+                        servers.</li>
+                    <li>Managed global NetApp storage systems, implementing rigorous Snapmirror and snapshot retention
+                        policies.</li>
+                    <li>Optimized performance for six XioTech storage arrays dedicated to critical SQL workloads.</li>
+                    <li>Played a pivotal role in the enterprise migration from Google Apps to Office 365.</li>
+                    <li>Engineered and deployed standardized Windows 10 images and McAfee ePO security environments.
+                    </li>
+                </ul>
+            </div>
+
+            <div class="job-card">
+                <div class="job-header">
+                    <span class="job-title">Computer Technician III / II</span>
+                    <span class="job-company">Fandotech (Industrial Defender)</span>
+                    <span class="job-date">July 2009 - Sept 2013</span>
+                </div>
+                <ul class="job-details">
+                    <li>Provided advanced technical support and system maintenance (Computer Technician III, Jan 2011 -
+                        Sept 2013).</li>
+                    <li>Maintained hardware and software systems for internal users (Computer Technician II, July 2009 -
+                        Dec 2010).</li>
+                </ul>
+            </div>
+
+        </section>
+
+        <!-- Education -->
+        <section class="resume-section">
+            <h2>Education</h2>
+            <div class="job-card">
+                <div class="job-header">
+                    <span class="job-title">B.S. Business Administration in Business Information Systems</span>
+                    <span class="job-company">Western New England College</span>
+                    <span class="job-date">2009</span>
+                </div>
+            </div>
+        </section>
+
+        <!-- Certifications -->
+        <section class="resume-section">
+            <h2>Certifications</h2>
+            <div class="glass-panel" style="text-align: left;">
+                <ul class="job-details">
+                    <li>Microsoft Certifications (MCTS, MCITP, MCSA)</li>
+                    <li>Google Apps Certified Administrator</li>
+                    <li>Azure Fundamentals</li>
+                </ul>
+            </div>
+        </section>
+
+        <footer>
+            <p>&copy;
+                <script>document.write(new Date().getFullYear())</script> Chuck Lindblom
+            </p>
+        </footer>
+    </div>
+
+</body>
+
+</html>
