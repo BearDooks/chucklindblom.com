@@ -239,19 +239,36 @@
     </div>
 
     <script>
+        function loadGoogleAnalytics() {
+            const script = document.createElement('script');
+            script.async = true;
+            script.src = 'https://www.googletagmanager.com/gtag/js?id=G-2MYL07MPMM';
+            document.head.appendChild(script);
+
+            window.dataLayer = window.dataLayer || [];
+            function gtag() { dataLayer.push(arguments); }
+            gtag('js', new Date());
+            gtag('config', 'G-2MYL07MPMM');
+        }
+
         document.addEventListener("DOMContentLoaded", function () {
             const banner = document.getElementById("cookie-banner");
             const acceptBtn = document.getElementById("accept-cookies");
             const declineBtn = document.getElementById("decline-cookies");
+
+            // Check if user has already made a choice
             const consent = localStorage.getItem("cookieConsent");
 
-            if (!consent) {
+            if (consent === "accepted") {
+                loadGoogleAnalytics();
+            } else if (!consent) {
                 banner.style.display = "flex";
             }
 
             acceptBtn.addEventListener("click", function () {
                 localStorage.setItem("cookieConsent", "accepted");
                 banner.style.display = "none";
+                loadGoogleAnalytics();
             });
 
             declineBtn.addEventListener("click", function () {
