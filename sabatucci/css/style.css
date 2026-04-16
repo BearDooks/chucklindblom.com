@@ -68,12 +68,21 @@ header.glass-panel {
 }
 
 .logo {
-  font-size: 1.8rem;
-  font-weight: 800;
+  display: flex;
+  align-items: center;
   text-decoration: none;
-  color: var(--primary-color);
-  letter-spacing: -0.5px;
-  text-transform: uppercase;
+  transition: transform 0.3s ease;
+}
+
+.logo:hover {
+  transform: scale(1.02);
+}
+
+.nav-logo-img {
+  height: 90px;
+  width: auto;
+  display: block;
+  transition: transform 0.3s ease;
 }
 
 .logo span {
@@ -199,6 +208,23 @@ main {
   box-shadow: 0 6px 15px rgba(41, 120, 160, 0.6);
 }
 
+/* Mid-Page Logo */
+.mid-logo-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3.5rem;
+  margin-bottom: -1rem; /* Pulls the features up slightly */
+  animation: fadeIn 1s ease-out;
+}
+
+.mid-logo {
+  max-width: 400px;
+  width: 90%;
+  height: auto;
+  filter: drop-shadow(0 10px 15px rgba(0,0,0,0.1));
+}
+
 /* Features/Services */
 .features {
   display: grid;
@@ -258,6 +284,19 @@ main {
 }
 
 /* Projects Gallery */
+.gallery-section {
+  margin-bottom: 4rem;
+}
+
+.category-title {
+  font-size: 2rem;
+  color: var(--primary-color);
+  margin-bottom: 1.5rem;
+  border-bottom: 2px solid var(--secondary-color);
+  padding-bottom: 0.5rem;
+  display: inline-block;
+}
+
 .gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -269,6 +308,7 @@ main {
   display: flex;
   flex-direction: column;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
+  cursor: pointer; /* Added pointer to show interactivity */
 }
 
 .project-card:hover {
@@ -297,6 +337,81 @@ main {
   color: var(--secondary-color);
   margin-bottom: 0.8rem;
   font-size: 1.4rem;
+}
+
+/* Lightbox Modal */
+.lightbox {
+  display: none;
+  position: fixed;
+  z-index: 2000;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: rgba(39, 41, 50, 0.95);
+  backdrop-filter: blur(5px);
+}
+
+.lightbox-content {
+  margin: auto;
+  display: block;
+  max-width: 90%;
+  max-height: 85vh;
+  object-fit: contain;
+  border-radius: 8px;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.6);
+  animation: zoomIn 0.3s ease;
+}
+
+@keyframes zoomIn {
+  from {transform:scale(0.95); opacity:0;}
+  to {transform:scale(1); opacity:1;}
+}
+
+.lightbox-close {
+  position: absolute;
+  top: 20px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-close:hover,
+.lightbox-close:focus {
+  color: var(--secondary-color);
+  text-decoration: none;
+}
+
+.lightbox-prev, .lightbox-next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-size: 30px;
+  font-weight: bold;
+  transition: 0.3s;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  background: rgba(0,0,0,0.3);
+  border: none;
+}
+
+.lightbox-next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.lightbox-prev:hover, .lightbox-next:hover {
+  background-color: rgba(0,0,0,0.8);
+  color: var(--secondary-color);
 }
 
 /* Contact Form */
