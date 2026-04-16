@@ -1,0 +1,82 @@
+# SEO Configuration File for Sabatucci Construction Website
+# Use this when preparing the site for production layout.
+
+## 1. Global SEO Tags & Recommendations
+- Ensure all images have `alt` text defined (already implemented on projects.html).
+- Add an XML Sitemap when the site goes live.
+- Create a `robots.txt` file to instruct search engines.
+- Add `<link rel="canonical" href="https://www.sabatucciconstruction.com/current_page">` to each page.
+- Consider adding JSON-LD structured data for a Local Business (see snippet below).
+
+## 2. Page Metadata
+
+### Home Page (index.html)
+**Title Tag (`<title>`)**: 
+Sabatucci Construction | Expert General Contractor in Wallingford, CT
+**Meta Description**:
+<meta name="description" content="Sabatucci Construction is a family-owned general contractor based in Wallingford, CT, offering over 30 years of expert carpentry, kitchen remodels, and deck building. Get a free estimate today!">
+**Target Keywords**: Wallingford CT contractor, Sabatucci construction, 30 years carpentry, deck building Wallingford, kitchen remodels CT.
+
+### About Us Page (about.html)
+**Title Tag (`<title>`)**: 
+About Us | 30+ Years Carpentry | Sabatucci Construction
+**Meta Description**:
+<meta name="description" content="Learn about Sabatucci Construction's 30+ year history. A family-owned, licensed, and insured construction company serving Wallingford, CT with trustworthy carpentry services.">
+**Target Keywords**: Family-owned construction Wallingford, trustworthy local carpenters, licensed and insured contractors CT.
+
+### Projects Page (projects.html)
+**Title Tag (`<title>`)**: 
+Our Projects | Kitchen & Deck Remodeling | Sabatucci Construction
+**Meta Description**:
+<meta name="description" content="View our recent construction and carpentry projects. Explore Sabatucci Construction's portfolio of luxury kitchen remodels and custom outdoor decks in Connecticut.">
+**Target Keywords**: Kitchen remodel portfolio CT, deck building gallery, custom carpentry examples Wallingford.
+
+### Contact Us Page (contact.html)
+**Title Tag (`<title>`)**: 
+Contact Us | Sabatucci Construction | Free Estimates
+**Meta Description**:
+<meta name="description" content="Get in touch with Sabatucci Construction in Wallingford, CT. Call (203) 265-2477 or email for a free estimate on your next home remodeling or decking project.">
+**Target Keywords**: Sabatucci construction phone number, free construction estimate Wallingford, contact contractor CT.
+
+--- 
+
+## 3. Local Business Structured Data for Head (JSON-LD)
+Add this to the `<head>` of index.html in production:
+
+```html
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "GeneralContractor",
+  "name": "Sabatucci Construction",
+  "image": "https://www.sabatucciconstruction.com/images/hero_bg.png",
+  "@id": "",
+  "url": "https://www.sabatucciconstruction.com",
+  "telephone": "203-265-2477",
+  "email": "SabatucciConstruction@yahoo.com",
+  "address": {
+    "@type": "PostalAddress",
+    "addressLocality": "Wallingford",
+    "addressRegion": "CT",
+    "addressCountry": "US"
+  },
+  "geo": {
+    "@type": "GeoCoordinates",
+    "latitude": 41.4562, /* Update to actual */
+    "longitude": -72.8228 /* Update to actual */
+  },
+  "openingHoursSpecification": {
+    "@type": "OpeningHoursSpecification",
+    "dayOfWeek": [
+      "Monday",
+      "Tuesday",
+      "Wednesday",
+      "Thursday",
+      "Friday"
+    ],
+    "opens": "08:00",
+    "closes": "17:00"
+  }
+}
+</script>
+```
