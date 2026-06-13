@@ -444,3 +444,139 @@ footer a:hover {
   color: #ffffff;
   border-color: rgba(255, 255, 255, 0.2);
 }
+
+/* --- Print Stylesheet for Resume --- */
+@media print {
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 11pt;
+    line-height: 1.5;
+  }
+
+  .resume-container {
+    max-width: 100% !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .resume-header {
+    margin-bottom: 2rem !important;
+    text-align: left !important;
+  }
+
+  .resume-header h1 {
+    font-size: 2.5rem !important;
+    color: #000000 !important;
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+  }
+
+  .text-gradient {
+    background: none !important;
+    -webkit-text-fill-color: initial !important;
+    background-clip: initial !important;
+    color: #000000 !important;
+  }
+
+  .resume-role {
+    color: #333333 !important;
+    font-size: 1.2rem !important;
+  }
+
+  .resume-contact {
+    color: #555555 !important;
+    font-size: 0.95rem !important;
+  }
+
+  .resume-nav,
+  .back-link,
+  .social-links,
+  .cookie-banner,
+  footer {
+    display: none !important;
+  }
+
+  .resume-section {
+    margin-bottom: 1.5rem !important;
+    page-break-inside: avoid;
+  }
+
+  .resume-section h2 {
+    color: #000000 !important;
+    border-bottom: 2px solid #333333 !important;
+    padding-bottom: 0.2rem !important;
+    margin-bottom: 1rem !important;
+    font-size: 1.3rem !important;
+  }
+
+  .job-card {
+    background: none !important;
+    border: none !important;
+    border-bottom: 1px dashed #cccccc !important;
+    border-radius: 0 !important;
+    padding: 1rem 0 !important;
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid !important;
+  }
+
+  .job-card:last-of-type {
+    border-bottom: none !important;
+  }
+
+  .job-header {
+    margin-bottom: 0.5rem !important;
+  }
+
+  .job-title {
+    font-size: 1.15rem !important;
+    color: #000000 !important;
+  }
+
+  .job-company {
+    color: #333333 !important;
+    font-weight: 700 !important;
+  }
+
+  .job-date {
+    color: #555555 !important;
+  }
+
+  .job-details li {
+    color: #333333 !important;
+    font-size: 10pt !important;
+    margin-bottom: 0.3rem !important;
+  }
+
+  .job-details li::before {
+    color: #000000 !important;
+    content: "•" !important;
+  }
+
+  .skills-category {
+    margin-bottom: 1rem !important;
+    page-break-inside: avoid !important;
+  }
+
+  .skills-category h3 {
+    color: #333333 !important;
+    margin-bottom: 0.5rem !important;
+    font-size: 0.9rem !important;
+  }
+
+  .skills-grid {
+    gap: 0.5rem !important;
+  }
+
+  .skill-tag {
+    background: none !important;
+    border: 1px solid #777777 !important;
+    color: #000000 !important;
+    padding: 0.3rem 0.6rem !important;
+    font-size: 0.85rem !important;
+    border-radius: 4px !important;
+    box-shadow: none !important;
+    transform: none !important;
+  }
+}
